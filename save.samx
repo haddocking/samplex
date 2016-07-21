@@ -1,0 +1,27 @@
+! This file is an exemple of input file you can use with Pred(U)Re.
+! You may always have at least one space between the definition and
+! the '=' and between the '=' and the corresponding data.
+
+! The working directory used by default
+Working Directory			=	./
+
+! The file that contains all structures to take into account
+Structure File				=	./structures.list
+
+! The file that contains chemical shifts pertubations between the folded and the unfolded states
+Chemical Shift Perturbation File	=	./ci2.dat
+
+! The threshold value that will set the limit between the core and the intermediate
+Lower limit					=	0.45
+
+! The threshold value that will set the limit between the intermediate and the non-core
+Upper limit					=	0.55
+
+! Do you want to display the result in PyMol ?
+PyMol display					=	1
+
+! PyMol pathway - edit
+PyMol pathway					=	`which pymol`
+
+
+That's all!

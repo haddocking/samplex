@@ -1,0 +1,16 @@
+from pymol import cmd
+import os
+cmd.set("hide_underscore_names", "1")
+cmd.set("bg_rgb", "[.75, .75, .75]")
+cmd.set("sphere_scale", "0.4")
+cmd.load("./1LW6_I.pdb", "_prot")
+cmd.hide("everything")
+cmd.show("cartoon")
+cmd.show("sphere", "resn pro and name n+nh")
+cmd.select("_infered", "resi 21+25+44+52+80")
+cmd.show("sphere", "_infered  and name ca")
+cmd.mset("1 -3")
+cmd.mdo(1, "color black; color blue, resi 21-55 or resi 64-83; color purple, resi 56; color red, resi 57-63")
+cmd.mdo(2, "color black; color blue, resi 21-55 or resi 63-83; color red, resi 56-62")
+cmd.mdo(3, "color black; color blue, resi 21-55 or resi 64-83; color purple, resi 63; color red, resi 56-62")
+cmd.mplay()
