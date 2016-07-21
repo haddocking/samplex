@@ -3,11 +3,11 @@ SAMPLEX
 
 ## Smooth Automated Mapping of Proteins from Listed EXtreme (SAMPLEX) ###
 
-## Authors:## Mickael Krzeminski 
+## Authors: Mickael Krzeminski 
 
-## Version:## 1.0, August 2009
+## Version: 1.0, August 2009
 
-## Reference:##
+## Reference:
 
 When using SAMPLEX cite:
 
@@ -119,10 +119,10 @@ In this NGI, no PyMol interface will be run.
 Known problems
 --------------
 
-   Obviously, many different platforms trigger problems on some of them. The following part list
+Obviously, many different platforms trigger problems on some of them. The following part list
 the possible errors you can meet and how to fix them.
 
-	1. I got a message similar to "samplex_1.0.py: Command not found." upon running SAMPLEX. Why ?
+1. I got a message similar to "samplex_1.0.py: Command not found." upon running SAMPLEX. Why ?
   This can be due to the pathway python has been installed on your computer. We assume for a Linux
 distribution for instance that your /usr/bin/env file can locate it. If it is not the case, replace
 the very first line of the script by the correct location, as following:
@@ -133,6 +133,12 @@ the very first line of the script by the correct location, as following:
 ```
     python samplex_1.0.py
 ```
-  The other reason can come that you are not in the directory where is located the main Python script
+The other reason can come that you are not in the directory where is located the main Python script
 of SAMPLEX. In such a case, change directory or specify either a CORRECT absolute or relative pathway.
 
+2. Samplex stops with some strange error message.
+   This is often related to the graphical interface. You can run samplex in its non-graphical mode by adding the --ng option
+For this edit first the paramter file to define all files and paramters and then call samplex with:
+```
+   samplex_1.0.py -ng -f save.samp
+```
